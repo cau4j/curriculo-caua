@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Cauã Jordão</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* o * seleciona TODOS os elementos zeramos margin e padding pq navegador adiciona espaços padrão que atrapalham */
+        body {
+           background: radial-gradient(ellipse at center, #2d2d4e 0%, #1a1a2e 100%);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .pagina {
+            background-color: #1a1a2e;
+            width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            color: white;
+            border-left: 100px solid #e94560;
+        }
+        /* width fixa a largura do currículo 
+        margin: 30px auto centraliza na tela */
+
+        .cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        /* flex coloca esquerda e direita lado a lado
+   align-items: flex-start alinha pelo topo
+   ao invés de centralizar verticalmente */
+
+        .cabecalho-direita {
+            text-align: right;
+        }
+
+        .tag {
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+
+        .nome {
+            font-size: 72px;
+            font-weight: bold;
+            color: #e94560;
+            line-height: 1;
+            font-family: 'Playfair Display', serif;
+        }
+        /* line-height: 1 deixa as linhas bem juntinhas
+   igual no currículo original */
+        .contatos {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .titulo-cargo {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .titulo-cargo span {
+            font-weight: bold;
+        }
+        /* só a palavra ASSISTENTE fica em negrito */
+
+        .cabecalho-direita img {
+            width: 160px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .secao {
+            margin-bottom: 25px;
+        }
+
+        .titulo-secao {
+            color: #e94560;
+            font-size: 14px;
+            letter-spacing: 2px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e94560;
+            margin-bottom: 15px;
+        }
+
+        .texto-resumo {
+            font-size: 12px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .skills-lista {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .skills-lista li::before {
+            content: "• ";
+            color: #e94560;
+        }
+
+        .experiencia-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .experiencia-cargo {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .experiencia-periodo {
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+
+        .experiencia-empresa {
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-bottom: 10px;
+        }
+
+        .experiencia-lista {
+            list-style: none;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .experiencia-lista li::before {
+            content: "• ";
+            color: #e94560;
+        }
+    </style>
+</head>
+<body>
+    <div class="pagina">
+        
+        <header class="cabecalho">
+
+            <div class="cabecalho-esquerda">
+                <span class="tag">[RESUMO]</span>
+                <h1 class="nome">CAUÃ<br>JORDÃO</h1>
+                <div class="contatos">
+                    <div>
+                        <p class="label">PHONE</p>
+                        <p>(16) 99623-3587</p>
+                    </div>
+                    <div>
+                        <p class="label">EMAIL</p>
+                        <p>cauajordao124@gmail.com</p>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="cabecalho-direita">
+                <p class="titulo-cargo"><span>ASSISTENTE</span> ADMINISTRATIVO</p>
+                <img src="PXL_20260202_194012700.jpg" alt="Foto do Cauã">
+            </div>
+        </header>
+
+        <section class="secao"> <!-- section é uma tag semântica pra separar seções do conteúdo -->
+
+            <h2 class="titulo-secao">RESUMO PROFISSIONAL</h2>
+
+            <p class="texto-resumo">
+                ASSISTENTE ADMINISTRATIVO COM 1 ANO E 6 MESES DE EXPERIÊNCIA EM AMBIENTE INDUSTRIAL, COM ATUAÇÃO EM CONTROLE DE PLANILHAS, ORGANIZAÇÃO DE DADOS, ELABORAÇÃO DE DOCUMENTOS E APOIO ÀS ROTINAS ADMINISTRATIVAS. POSSUO CONHECIMENTO EM EXCEL, WORD E PACOTE OFFICE, COM FOCO EM ORGANIZAÇÃO, ATENÇÃO AOS DETALHES E APRENDIZADO CONTÍNUO.
+            </p>
+
+        </section>
+
+        <section class="secao">
+
+            <h2 class="titulo-secao">SKILSS</h2>
+
+            <ul class="skills-lista">
+                <li>MICROSOFT EXCEL</li>
+                <li>MICROSOFT WORD</li>
+                <li>PACOTE OFFICE</li>
+                <li>ELABORAÇÃO DE RELATÓRIOS</li>
+                <li>NOÇÕES DE DESIGN</li>
+                <li>NOÇÕES DE DESENVOLVIMENTO WEB (HTML/CSS BÁSICO)</li>
+                <li>EDIÇÃO DE VÍDEO</li>
+            </ul>
+
+        </section>
+
+        <section class="secao">
+
+            <h2 class="titulo-secao">EXPERIÊNCIA PROFISSIONAL</h2>
+
+            <div class="experiencia-item">
+
+                <div class="experiencia-header">
+                    <p class="experiencia-cargo">JOVEM APRENDIZ ASSISTENTE ADMINISTRATIVO</p>
+                    <p class="experiencia-periodo">MAI/2024 — NOV/2025</p>
+                </div>
+
+                <p class="experiencia-empresa">SÃO MARTINHO</p>
+
+                <ul class="experiencia-lista">
+                    <li>CONTROLE E ATUALIZAÇÃO DE PLANILHAS EM EXCEL</li>
+                    <li>ORGANIZAÇÃO E REGISTRO DE DADOS ADMINISTRATIVOS</li>
+                    <li>APOIO NA ELABORAÇÃO DE RELATÓRIOS E DOCUMENTOS</li>
+                    <li>UTILIZAÇÃO DE FÓRMULAS BÁSICAS NO EXCEL, COMO SOMA E SE</li>
+                    <li>CRIAÇÃO E EDIÇÃO DE DOCUMENTOS NO WORD</li>
+                    <li>SUPORTE ÀS ROTINAS ADMINISTRATIVAS DO SETOR</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section class="secao">
+
+            <h2 class="titulo-secao">Formação e Cursos</h2>
+
+            <ul class="formacao-cursos">
+                <li>ASSISTENTE ADMINISTRATIVO - SENAI ARARAQUARA/SP | 2025</li>
+                <li>INFORMÁTICA COMPLETA - CEBRAC ARARAQUARA/SP | 2024</li>
+                <li>INFORMÁTICA BÁSICA – AMÉRICA BYTE, AMÉRICO BRASILIENSE/SP | 2023</li>
+            </ul>
+        </section>
+
+    </div>
+</body>
+</html>
